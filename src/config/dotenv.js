@@ -1,0 +1,17 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
+export const settingDotEnvPort = () => {
+    return { port: process.env.PORT || 4000};
+};
+
+export const settingDotEnvDB = () => {
+    return { db:{
+        locahost: process.env.DB_LOCALHOST
+    }};
+};
+
+export const settingDotEnvSecret = () => {
+    return {secret: process.env.SECRET_KEY};
+};
